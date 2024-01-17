@@ -1,0 +1,2 @@
+setup.sh eol=lf
+*.sql eol=lf
