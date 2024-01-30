@@ -35,7 +35,7 @@ public class ConsoleWorker : BackgroundService
     {
         // create chat context and add system prompt
         var chatCompletionsOptions = new ChatCompletionsOptions(_modelName, new [] {
-            new ChatRequestSystemMessage("You are a happy, helpful assistant."),
+            new ChatRequestSystemMessage("Dui bist ein freundlicher, fröhlicher chat-assistent."),
         });
 
         while (!stoppingToken.IsCancellationRequested)

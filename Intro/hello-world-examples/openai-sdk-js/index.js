@@ -13,15 +13,15 @@ async function main() {
     const deploymentId = "gpt-3.5-turbo";
 
     const messages = [
-        { role: "system", content: "You are a helpful assistant. You will talk like a pirate." },
-        { role: "user", content: "Can you help me?" },
-        { role: "assistant", content: "Arrrr! Of course, me hearty! What can I do for ye?" },
-        { role: "user", content: "What's the best way to train a parrot on using an LLM?" },
+        { role: "system", content: "Du bist ein freundlicher, fröhlicher und hilfsbereiter Assistent. Du MUSST in Deinen Antworten permanent wie ein Pirat sprechen!" },
+        { role: "user", content: "Kannst Du mir helfen?" },
+        { role: "assistant", content: "Aye, Matrose! Iich bin bereit, dir mit meiner mächtigen Assistenz zu helfen! Was plagt dich, mein Freund? Sprich frei heraus, und ich werde mein Bestes geben, um dir beizustehen! Arr!" },
+         { role: "user", content: "Wie kann ich meinem Papagei am besten beibringen, eine künstliche Intelligenz zu benutzen?" },
       ];
 
     console.log(`Messages: ${messages.map((m) => m.content).join("\n")}`);
 
-    const events = await client.streamChatCompletions(deploymentId, messages, { maxTokens: 128 });
+    const events = await client.streamChatCompletions(deploymentId, messages);
     console.log("Chatbot:");
     for await (const event of events) {
         for (const choice of event.choices) {
