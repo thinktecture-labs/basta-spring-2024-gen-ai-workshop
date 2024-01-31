@@ -3,7 +3,7 @@ const { OpenAIClient, OpenAIKeyCredential } = require('@azure/openai');
 
 async function main() {
     // Read api key
-    const apiKey = fs.readFileSync('openaiapikey.txt', 'utf8');
+    const apiKey = process.env.OPENAI_API_KEY;
     if (!apiKey) {
         throw new Error('apiKey is not set');
     }

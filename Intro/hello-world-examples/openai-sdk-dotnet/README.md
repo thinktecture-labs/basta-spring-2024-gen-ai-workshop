@@ -1,5 +1,5 @@
 # Setup
 
 ```
-dotnet user-secrets set OpenAiApiKey {YOUR OPENAI API KEY}
+dotnet user-secrets set OPENAI_API_KEY {YOUR OPENAI API KEY}
 ```

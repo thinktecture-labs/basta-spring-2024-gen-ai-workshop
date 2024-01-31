@@ -11,7 +11,7 @@ try
 		.UseSerilog((ctx, logger) => logger.ReadFrom.Configuration(ctx.Configuration))
 		.ConfigureServices((ctx, services) =>
 		{
-			services.AddSingleton(new OpenAIClient(ctx.Configuration["OpenAIApiKey"]));
+			services.AddSingleton(new OpenAIClient(ctx.Configuration["OPENAI_API_KEY"]));
             services.AddHostedService<ConsoleWorker>();
 		})       
 		.Build();
