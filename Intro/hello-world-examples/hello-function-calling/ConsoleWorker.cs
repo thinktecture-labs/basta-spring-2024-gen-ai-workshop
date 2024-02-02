@@ -62,7 +62,6 @@ public class ConsoleWorker : BackgroundService
         // use reflection to add another tool
         chatCompletionsOptions.Tools.Add(GetType().GetMethod("BookSlot")!.ToDefinition());
 
-
         bool wasToolCall = false;
         while (!stoppingToken.IsCancellationRequested)
         {
