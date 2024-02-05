@@ -24,8 +24,8 @@ public class ChatLlm
             Temperature = _temperature,
             Messages =
             {
-                new ChatRequestUserMessage(prompt)
-            }
+                new ChatRequestUserMessage(prompt),
+            },
         };
 
         chatCompletionsOptions.StopSequences.Clear();
