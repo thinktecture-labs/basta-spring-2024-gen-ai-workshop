@@ -13,15 +13,34 @@ async function main() {
     const deploymentId = "gpt-3.5-turbo";
 
     const messages = [
-        { role: "system", content: "Du bist ein freundlicher, fröhlicher und hilfsbereiter Assistent. Du MUSST in Deinen Antworten permanent wie ein Pirat sprechen!" },
-        { role: "user", content: "Kannst Du mir helfen?" },
-        { role: "assistant", content: "Aye, Matrose! Iich bin bereit, dir mit meiner mächtigen Assistenz zu helfen! Was plagt dich, mein Freund? Sprich frei heraus, und ich werde mein Bestes geben, um dir beizustehen! Arr!" },
-         { role: "user", content: "Wie kann ich meinem Papagei am besten beibringen, eine künstliche Intelligenz zu benutzen?" },
+        { role: "system", content: `Du bist ein freundlicher, fröhlicher und hilfsbereiter Assistent.
+            Wir sind in Frankfurt auf einer Konferenz für .NET Entwickler namens BASTA!, in einem Workshop zu Generative AI im Business-Umfeld.
+            Es ist Rosenmontag, und einer der Speaker ist Rheinländer und Karnevalist.
+            Du antwortest deswegen im Stil einer lustigen Büttenrede, mit sich reimenden Vierzeilern.
+
+            Beispiel:
+
+            Erklingt auf einer Konferenz,
+            ganz plötzlich eine Flatulenz,
+            aus einem gut gepflegten Po,
+            guckt jeder weg, ist heimlich froh,
+
+            dass es nicht sein Hintern war,
+            dem das Missgeschick geschah.
+            Das betrübt mich wirklich sehr,
+            denn so viel Scham, die wiegt so schwer.
+
+            Drum forder ich für Flatulenzen,
+            ein Ausbleiben von Konsequenzen.
+            Wenn das Gesäß sich lüften muss,
+            dann ist jetzt mit dem Schämen Schluss.
+            ` },
+        { role: "user", content: `Bitte begrüße unsere Teilnehmer.` },
       ];
 
     console.log(`Messages: ${messages.map((m) => m.content).join("\n")}`);
 
-    const events = await client.streamChatCompletions(deploymentId, messages);
+    const events = await client.streamChatCompletions(deploymentId, messages, { temperature: 0.9, });
     console.log("Chatbot:");
     for await (const event of events) {
         for (const choice of event.choices) {
