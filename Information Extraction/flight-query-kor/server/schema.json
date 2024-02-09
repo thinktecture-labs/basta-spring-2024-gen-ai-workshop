@@ -1,0 +1,75 @@
+{
+    "id": "flight_search",
+    "description": "Data about a flight ticket search",
+    "many": false,
+    "attributes": [
+        {
+            "$type": "Text",
+            "id": "departure_airport",
+            "description": "The departure airport",
+            "many": false,
+            "examples": []
+        },
+        {
+            "$type": "Text",
+            "id": "destination_airport",
+            "description": "The destination airport",
+            "many": false,
+            "examples": []
+        },
+        {
+            "$type": "Text",
+            "id": "departure_date",
+            "description": "The date of the departure. This is a date later than the current date.",
+            "many": false,
+            "examples": []
+        },
+        {
+            "$type": "Text",
+            "id": "return_date",
+            "description": "The date of the return flight. This is a date later than the current date.",
+            "many": false,
+            "examples": []
+        },
+        {
+            "$type": "Text",
+            "id": "airline",
+            "description": "Airline",
+            "many": true,
+            "examples": []
+        },
+        {
+            "$type": "Selection",
+            "id": "class",
+            "description": "Ticket class.  \"economy\" If asked for cheap tickets. \"premiumeconomy\" default if no other matches best. \"business\" if asked for a business trip. \"first\" use this if asked for or if the user agent comes from an Apple (iPhone/iPad) device",
+            "options": [
+                {
+                    "id": "economy",
+                    "description": "If asked for cheap tickets."
+                },
+                {
+                    "id": "business",
+                    "description": "If asked for a business trip."
+                },
+                {
+                    "id": "first",
+                    "description": "Use this if asked for or if the user agent is an Apple device (iPhone/iPad) device."
+                },
+                {
+                    "id": "premiumeconomy",
+                    "description": "Default if no other matches best."
+                }
+            ],
+            "many": false,
+            "examples": []
+        },
+        {
+            "$type": "Number",
+            "id": "number_of_persons",
+            "description": "Number of persons",
+            "many": false,
+            "examples": []
+        }
+    ],
+    "examples": []
+}

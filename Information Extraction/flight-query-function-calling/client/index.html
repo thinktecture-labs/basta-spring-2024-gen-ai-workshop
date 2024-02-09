@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Filter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Add custom styles here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Flight Query</h1>
+        <form id="queryForm">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="query" name="query">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <hr>
+        <form id="responseForm" style="display: none;">
+            <div class="mb-3">
+                <label for="departureAirport" class="form-label">Departure Airport</label>
+                <input type="text" class="form-control" id="departureAirport" name="departureAirport" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="destinationAirport" class="form-label">Destination Airport</label>
+                <input type="text" class="form-control" id="destinationAirport" name="destinationAirport" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="departureDate" class="form-label">Departure Date</label>
+                <input type="text" class="form-control" id="departureDate" name="departureDate" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="returnDate" class="form-label">Return Date</label>
+                <input type="text" class="form-control" id="returnDate" name="returnDate" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="airline" class="form-label">Airline</label>
+                <input type="text" class="form-control" id="airline" name="airline" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="class" class="form-label">Class</label>
+                <input type="text" class="form-control" id="class" name="class" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="numberOfPersons" class="form-label">Number of Persons</label>
+                <input type="text" class="form-control" id="numberOfPersons" name="numberOfPersons" readonly>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
