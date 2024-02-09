@@ -39,7 +39,7 @@ def get_prompt():
         else:
             try:
                 question = system_prompt.format(question=prompt)
-                print(db_chain.invoke(question))
+                db_chain.invoke(question)
             except Exception as e:
                 print(e)
 

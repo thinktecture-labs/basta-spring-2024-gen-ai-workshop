@@ -6,9 +6,9 @@ You will need an OpenAI api key for this demo to run.
 
 First, let's setup the database:
 ```pwsh
-docker run -d --name talk-to-my-data-pgsql-db -e "POSTGRES_PASSWORD=<Strong!Passw0rd>" -p 5432:5432 -v ${PWD}/db-init:/mnt/db postgres:16.1
+docker run -d --name basta2024-talk-to-my-data-pgsql-db -e "POSTGRES_PASSWORD=<Strong!Passw0rd>" -p 5432:5432 -v ${PWD}/db-init:/mnt/db postgres:16.1
 
-docker container exec -it talk-to-my-data-pgsql-db bash
+docker container exec -it basta2024-talk-to-my-data-pgsql-db bash
 chmod +x /mnt/db/setup.sh
 /mnt/db/setup.sh
 exit
@@ -18,10 +18,12 @@ After that initial setup, you can use `docker start --name talk-to-my-data-pgsql
 
 Then, create the python environment:
 ```pwsh
-conda create --name talk-to-my-data-sql python=3.12 -y
-conda env config vars set --name talk-to-my-data-sql OPENAI_API_KEY={YOUR OPENAI API KEY}
+conda create --name basta2024-talk-to-my-data-sql python=3.12 -y
+conda install -n basta2024-talk-to-my-data-sql pip==23.3.1 -y --force
 
-conda activate talk-to-my-data-sql
+conda env config vars set --name basta2024-talk-to-my-data-sql OPENAI_API_KEY={YOUR OPENAI API KEY}
+
+conda activate basta2024-talk-to-my-data-sql
 pip install -r requirements.txt
 ```
 

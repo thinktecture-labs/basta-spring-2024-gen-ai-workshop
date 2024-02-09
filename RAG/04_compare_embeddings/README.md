@@ -9,13 +9,13 @@ To run the required vector database locally, use this command:
 
 Prepare the environment:
 ```
-conda create --name 04-compare-embeddings python=3.9.5 -y
-conda install --name 04-compare-embeddings pip -y --force
+conda create --name basta2024-04-compare-embeddings python=3.9.5 -y
+conda install --name basta2024-04-compare-embeddings pip==23.3 -y --force
 
-conda env config vars set --name 04-compare-embeddings OPENAI_API_KEY={YOUR OPENAI API KEY}
-conda env config vars set --name 04-compare-embeddings HUGGINGFACEHUB_API_TOKEN={YOUR HUGGINGFACE API TOKEN}
+conda env config vars set --name basta2024-04-compare-embeddings OPENAI_API_KEY={YOUR OPENAI API KEY}
+conda env config vars set --name basta2024-04-compare-embeddings HUGGINGFACEHUB_API_TOKEN={YOUR HUGGINGFACE API TOKEN}
 
-conda activate 04-compare-embeddings
+conda activate basta2024-04-compare-embeddings
 pip install -r requirements.txt
 ```
 
