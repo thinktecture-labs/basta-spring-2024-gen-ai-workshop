@@ -81,7 +81,7 @@ retriever = configure_retriever(uploaded_files)
 memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True, output_key='answer')
 
 # Here you can change the base URL to e.g. point to a non-OpenAI LLM which has OpenAI API compatibility
-llm = ChatOpenAI(openai_api_base="http://localhost:8082/v1", 
+llm = ChatOpenAI(#openai_api_base="http://localhost:8082/v1", 
                  temperature=0.0,
                  model="gpt-4",
                  streaming=True)
