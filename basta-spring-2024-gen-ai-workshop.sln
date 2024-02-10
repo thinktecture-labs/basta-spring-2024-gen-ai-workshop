@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hello World", "Hello World", "{09001A87-4780-4694-8D0A-F3F2926D7C75}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "openai-sdk-dotnet", "Hello World\openai-sdk-dotnet\openai-sdk-dotnet.csproj", "{4D77F8F3-49F0-4E1E-B64A-D41285DA87A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RAG", "RAG", "{38E7B027-1446-46A1-BA4D-291196D88779}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatWithWebSite", "RAG\simple-rag-semantic-kernel-console\ChatWithWebSite.csproj", "{376E3E56-E59D-4999-A265-6019EA504884}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Function Calling", "Function Calling", "{B81A9495-F0E5-4296-A0E0-6EF25D8F1422}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hello-function-calling", "Function Calling\hello-function-calling\hello-function-calling.csproj", "{47295FF9-5B0C-4AAE-9A11-24752CBFD3FD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolCallingSample", "Function Calling\tool_function-calling-sk\ToolCallingSample.csproj", "{5EE13716-3646-4CDD-85F6-67803A7A9E7C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReAct", "ReAct", "{111F4615-74A4-4C91-A6A3-FFC8CE239E49}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReActLLMAgent", "ReAct\ReActLLMAgent\ReActLLMAgent.csproj", "{C78BCF91-7861-4870-B596-BF6623B3D278}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D77F8F3-49F0-4E1E-B64A-D41285DA87A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D77F8F3-49F0-4E1E-B64A-D41285DA87A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D77F8F3-49F0-4E1E-B64A-D41285DA87A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D77F8F3-49F0-4E1E-B64A-D41285DA87A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{376E3E56-E59D-4999-A265-6019EA504884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{376E3E56-E59D-4999-A265-6019EA504884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{376E3E56-E59D-4999-A265-6019EA504884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{376E3E56-E59D-4999-A265-6019EA504884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47295FF9-5B0C-4AAE-9A11-24752CBFD3FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47295FF9-5B0C-4AAE-9A11-24752CBFD3FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47295FF9-5B0C-4AAE-9A11-24752CBFD3FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47295FF9-5B0C-4AAE-9A11-24752CBFD3FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EE13716-3646-4CDD-85F6-67803A7A9E7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EE13716-3646-4CDD-85F6-67803A7A9E7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EE13716-3646-4CDD-85F6-67803A7A9E7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EE13716-3646-4CDD-85F6-67803A7A9E7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C78BCF91-7861-4870-B596-BF6623B3D278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C78BCF91-7861-4870-B596-BF6623B3D278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C78BCF91-7861-4870-B596-BF6623B3D278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C78BCF91-7861-4870-B596-BF6623B3D278}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4D77F8F3-49F0-4E1E-B64A-D41285DA87A0} = {09001A87-4780-4694-8D0A-F3F2926D7C75}
+		{376E3E56-E59D-4999-A265-6019EA504884} = {38E7B027-1446-46A1-BA4D-291196D88779}
+		{47295FF9-5B0C-4AAE-9A11-24752CBFD3FD} = {B81A9495-F0E5-4296-A0E0-6EF25D8F1422}
+		{5EE13716-3646-4CDD-85F6-67803A7A9E7C} = {B81A9495-F0E5-4296-A0E0-6EF25D8F1422}
+		{C78BCF91-7861-4870-B596-BF6623B3D278} = {111F4615-74A4-4C91-A6A3-FFC8CE239E49}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4CE6F85B-1338-4B27-ACE2-4E4947C44CA5}
+	EndGlobalSection
+EndGlobal
